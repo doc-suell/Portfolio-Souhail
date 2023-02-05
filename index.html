@@ -361,9 +361,15 @@
             </div>
 
             <div class="col-lg-8" data-aos="fade-up" data-aos-delay="300">
-              <form action="#" class="row g-lg-3 gy-3">
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                class="row g-lg-3 gy-3"
+              >
                 <div class="form-group col-md-6">
                   <input
+                    name="name"
                     type="text"
                     class="form-control"
                     placeholder="Entrez votre nom"
@@ -372,6 +378,7 @@
                 <div class="form-group col-md-6">
                   <input
                     type="email"
+                    name="email"
                     class="form-control"
                     placeholder="Entrer votre Email"
                   />
@@ -385,12 +392,13 @@
                 </div>
                 <div class="form-group col-12">
                   <textarea
-                    name=""
                     rows="4"
+                    name="message"
                     class="form-control"
                     placeholder="Enter your message"
                   ></textarea>
                 </div>
+                <div data-netlify-recaptcha="true"></div>
                 <div class="form-group col-12 d-grid">
                   <button type="submit" class="btn btn-brand">
                     Contactez moi
@@ -435,7 +443,7 @@
     <!-- //FOOTER -->
 
     <!-- //CONTENT WRAPPER -->
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/aos.js"></script>
     <script src="./assets/js/main.js"></script>
